@@ -1,3 +1,18 @@
+/*
+Phoenix Brehm
+EECS 348
+Lab Extra Credit
+
+Grade category request: 20 pts into Quiz grades
+
+
+Math for justification (not necessary to read just think it's interesting): (40/420)*(1/4)<(20/246)*(1/2) Assuming next week lab grade is 30 pts (the lower the points for next week's lab the higher the extra credit grade is), we would require >204 quiz/exam points in order to surpass the value of the quiz grade
+
+
+
+
+Goal: to take in a user string input and be able to turn it into a double which is displayed to the user in fixed notation up to 4 decimal places, also allowing for functionality of signs both positive and negative.
+*/
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -79,11 +94,11 @@ double extract(const string &str){
         if(valid ==-999999.99){
             return -999999.99;
         }
-        result = result + strtoInt(str[i])*power10(-1*(i-decimalindex)); //negative power
+        result = result + strtoInt(str[i])*power10(-1*(i-decimalindex)); //negative of repective power
     }
 
 
-
+    //if we have a negative sign at the front
     if(isNegative){
         result = result *-1;
     }
